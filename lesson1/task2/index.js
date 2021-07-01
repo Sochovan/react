@@ -1,4 +1,4 @@
-const rootElement = document.querySelector("#root");
+// const rootElement = document.querySelector("#root");
 
 // const renderGreeting = (elem) => {
 //   const containerElem = document.createElement("div");

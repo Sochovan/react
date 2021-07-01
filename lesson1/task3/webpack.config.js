@@ -20,6 +20,6 @@ module.exports = {
     }),
   ],
   output: {
-    path: path.resolve(__dirname, "newdist"),
+    path: path.resolve(__dirname, "review_build"),
   },
 };

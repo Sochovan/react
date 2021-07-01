@@ -19,6 +19,8 @@ const rootElement = document.querySelector("#root");
 
 // renderGreeting(rootElement);
 
+const rootElement = document.querySelector("#root");
+
 const element = React.createElement(
   "div",
   { className: "greeting" },

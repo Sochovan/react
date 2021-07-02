@@ -14,3 +14,4 @@ const greetingElem = React.createElement(
 );
 
 ReactDOM.render(greetingElem, rootElement);
+console.log(ReactDOM);

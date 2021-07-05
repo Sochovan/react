@@ -1,9 +1,9 @@
 import React from "react";
 
-const Goodbutton = () => (
+const GoodButton = () => (
   <button className="fancy-button" onClick={() => alert("Good job!")}>
     Click me!
   </button>
 );
 
-export default Goodbutton;
+export default GoodButton;

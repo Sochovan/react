@@ -1,18 +1,14 @@
 import React from "react";
+import moment from "moment";
 
-const Profile = (userData) => {
+const Profile = (props) => {
+  const age = moment(props.userData.birthDate).format("DD MMM YY");
   return (
-    <>
-      <div className="profile__name">{`${userData.firstName} ${userData.lastName}`}</div>
-      <div className="profile__birth">{`Was born ${userData.birthDate} in ${userData.birthPlace}`}</div>
-    </>
+    <div className="profile">
+      <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName} `}</div>
+      <div className="profile__birth">{`Was born ${age} in ${props.userData.birthPlace}`}</div>
+    </div>
   );
 };
-export default Profile;
 
-const userData = {
-  firstName: "John",
-  lastName: "Doe",
-  birthDate: "1991-01-17T11:11:11.819Z",
-  birthPlace: "London",
-};
+export default Profile;

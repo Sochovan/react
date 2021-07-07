@@ -20,14 +20,18 @@ class Clock extends Component {
       location: props.location,
       time: moment(getTimeWithOffset(props.offset)).format("LTS"),
     };
-    console.log(this.state);
-    setInterval(() => {
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
       this.setState({
-        time: moment(getTimeWithOffset(props.offset)).format("LTS"),
+        time: moment(getTimeWithOffset(this.props.offset)).format("LTS"),
       });
     }, 1000);
   }
-
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
   render() {
     return (
       <div className="clock">

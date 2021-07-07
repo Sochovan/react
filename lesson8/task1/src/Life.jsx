@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class Life extends React.Component {
+class Life extends Component {
   constructor(props) {
     super(props);
     console.log("constructor: good place to create state");
@@ -9,6 +9,7 @@ class Life extends React.Component {
   componentDidMount() {
     console.log("componentDidMount: API calls, subscriptions");
   }
+
   componentWillUnmount() {
     console.log(
       "componentWillUnmount(): cleanup before DOM related to component will be removed"
@@ -16,16 +17,13 @@ class Life extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
     console.log(
       "shouldComponentUpdate(nextProps, nextState): decide to render or not to render"
     );
-    return nextProps.number;
+    return true;
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.props;
-    console.log(prevProps);
     console.log(
       "componentDidUpdate(prevProps, prevState): some updates based on new props"
     );
@@ -33,7 +31,7 @@ class Life extends React.Component {
 
   render() {
     console.log("return React element to build DOM");
-    return <div className="number">{this.props.number}</div>;
+    return <div>{this.props.number}</div>;
   }
 }
 

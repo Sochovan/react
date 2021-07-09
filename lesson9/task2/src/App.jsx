@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Userform from "./Userform.jsx";
+import UserForm from "./UserForm.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   render() {
-    return <Userform onSubmit={this.createUser} />;
+    return <UserForm onSubmit={this.createUser} />;
   }
 }
 export default App;

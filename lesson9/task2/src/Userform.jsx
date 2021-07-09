@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Userform extends Component {
+class UserForm extends Component {
   state = {
     name: "",
     student: "",
@@ -86,4 +86,4 @@ class Userform extends Component {
   }
 }
 
-export default Userform;
+export default UserForm;

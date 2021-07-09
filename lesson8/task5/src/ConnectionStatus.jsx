@@ -5,7 +5,7 @@ class ConnectionStatus extends Component {
     super(props);
 
     this.state = {
-      status: "online",
+      status: true,
     };
   }
   componentDidMount() {

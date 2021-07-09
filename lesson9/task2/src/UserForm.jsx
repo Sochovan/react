@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 
 class UserForm extends Component {
-  state = {
-    name: "",
-    student: "",
-    occupation: "",
-    about: "",
-  };
+  constructor(props) {
+    super(props);
+    console.log(props);
+
+    this.state = {
+      name: "",
+      student: "",
+      occupation: "",
+      about: "",
+    };
+  }
 
   handleChange = (event) => {
     const { name, value, checked, type } = event.target;
 
     const val = type === "checkbox" ? checked : value;
+
     this.setState({
       [name]: val,
     });
@@ -20,7 +26,9 @@ class UserForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
+    this.props.onSubmit(this.state);
   };
+
   render() {
     return (
       <form className="login-form" onSubmit={this.handleSubmit}>

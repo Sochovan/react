@@ -79,7 +79,7 @@ class Game extends React.Component {
   }
 }
 
-// ========================================
+export default Game;
 
 function calculateWinner(squares) {
   const lines = [
@@ -100,5 +100,3 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-export default Game;

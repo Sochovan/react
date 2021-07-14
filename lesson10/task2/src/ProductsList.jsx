@@ -1,23 +1,8 @@
 import React from "react";
 
 class ProductsList extends React.Component {
-  state = {
-    cartItems: [
-      {
-        id: "1",
-        name: "iPhone 11",
-        price: 999,
-      },
-      {
-        id: "2",
-        name: "iPad Pro",
-        price: 799,
-      },
-    ],
-  };
-
   render() {
-    const total = this.state.cartItems.reduce(
+    const total = this.props.cartItems.reduce(
       (acc, item) => acc + item.price,
       0
     );

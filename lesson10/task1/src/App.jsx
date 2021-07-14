@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserProfile from "./UserIProfile.jsx";
+import UserProfile from "./UserProfile.jsx";
 import UserMenu from "./UserMenu.jsx";
 
 class Page extends Component {
@@ -15,12 +15,13 @@ class Page extends Component {
     const userUrl = `https://api.github.com/users/${userId}`;
     fetch(userUrl)
       .then((response) => response.json())
-      .then((userData) =>
+      .then((userData) => {
         this.setState({
           userData,
-        })
-      );
+        });
+      });
   };
+
   render() {
     return (
       <div className="page">

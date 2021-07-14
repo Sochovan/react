@@ -5,4 +5,4 @@ import Calculator from "./Calculator.jsx";
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Calculator userId="github" />, rootElement);
+ReactDOM.render(<Calculator />, rootElement);

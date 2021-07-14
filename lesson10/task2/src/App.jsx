@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ShoppingCart from "./ShoppingCart.jsx";
 import Profile from "./Profile.jsx";
 
+
 class Page extends Component {
   render() {
     return (

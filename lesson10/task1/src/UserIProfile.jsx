@@ -5,7 +5,9 @@ class UserProfile extends Component {
     if (!this.props.userData) {
       return null;
     }
-    const { name, location, avatar_url } = this.props.userData;
+
+    const { avatar_url, name, location } = this.props.userData;
+
     return (
       <div className="user">
         <img alt="User Avatar" src={avatar_url} className="user__avatar" />
@@ -17,4 +19,5 @@ class UserProfile extends Component {
     );
   }
 }
+
 export default UserProfile;

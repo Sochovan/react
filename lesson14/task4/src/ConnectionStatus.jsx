@@ -8,7 +8,7 @@ const ConnectionStatus = () => {
       setStatus(false);
     };
     const handleOnline = () => {
-      setState(true);
+      setStatus(true);
     };
 
     window.addEventListener("online", handleOnline);

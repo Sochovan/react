@@ -27,6 +27,9 @@ class TasksList extends Component {
   };
 
   onCreate = (text) => {
+    //1. Create task object
+    //2. Post object on server
+    //3. Fetch list from server
     const newTask = {
       text,
       done: false,
@@ -36,6 +39,10 @@ class TasksList extends Component {
   };
 
   handleTaskStatusChange = (id) => {
+    // 1. find task in state by id
+    // 2. ctreate updated task
+    // 3. update task on server
+    // 4. fetch updated task list
     const { done, text } = this.state.tasks.find((task) => task.id === id);
     const updatedTask = {
       text,

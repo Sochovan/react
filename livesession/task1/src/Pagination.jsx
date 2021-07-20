@@ -18,11 +18,11 @@ const Pagination = ({
   return (
     <div className="pagination">
       <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}>
-        {!isPrevPageAvailable ? "←" : null}
+        {!isPrevPageAvailable && "←"}
       </button>
       <span className="pagination__page">{currentPage}</span>
       <button className="btn" onClick={goNext} disabled={isNextPageAvailable}>
-        {!isNextPageAvailable ? "→" : null}
+        {!isNextPageAvailable && "→"}
       </button>
     </div>
   );
